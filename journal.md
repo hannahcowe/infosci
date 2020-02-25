@@ -2,61 +2,53 @@
  
  I created this program. 
  ```.py
+offset = 50
+
+def mouseClicked():
+    global offset
+    offset = offset + 1
+
 def setup():
-    size(600,600)
-    background(225)
-    strokeWeight(10)
+    size(500,500)
+    background(255)
     
 def draw():
-    stroke(0)
+    # line(x0yo,x1,y1)
+    stroke(0) # black line
+    y = 0
+    for n in range(10):
+        line(0,y, 500, y)
+        y = y + 50
+        
+    fill(0)
+    stroke(225) #white line
     
-def mouseClicked():
-    stroke (0)
-    rect(100, 100, 400, 400, 50)
-    stroke(225, 0, 0,) #red, geen, blue
-    n = random(0,6)
-    
-    if 0<=n<1:
-        # number one 
-        circle(300, 300, 50)
-    if 1<=n<2:
-        # number two
-        circle (200, 200, 50) 
-        circle (400, 400, 50) 
-    if 2<=n<3:
-        # number 3
-        circle (200, 200, 50) 
-        circle (400, 400, 50)
-        circle (300, 300, 50) 
-    if 3<=n<4:
-        # number 4
-        circle (200, 200, 50)
-        circle (200, 400, 50)
-        circle (400, 400, 50) 
-        circle (400, 200, 50)
-    if 4<=n<6:
-         # number 5
-        circle (200, 200, 50)
-        circle (200, 400, 50)
-        circle (400, 400, 50) 
-        circle (400, 200, 50)
-        circle (300, 300, 50) 
-    if 6<=n<7:
-        # number 6
-        circle (200, 200, 50)
-        circle (200, 400, 50)
-        circle (400, 400, 50) 
-        circle (400, 200, 50)
-        circle (200, 300, 50)
-        circle (400, 300, 50) 
+    y=0    
+    for n in range(5):
+        x = 0
+        for n in range(5):
+            square(x,y,50)
+            x = x + 100
+        y = y + 100
+        
+    # odd rows
+    y=50 
+    global offset 
+    for n in range(5):
+        x = 0 + offset
+        for n in range(5):
+            square(x,y,50)
+            x = x + 100
+        y = y + 100
+         
 ```.py 
 
-I learned how to make a dye and make it randomly go to a number.
+I learned how to make an optical illusion and program it to move.
 
-I have no questions.
+I want to now how to make the whole background white as some of my sqaures turned grey as I moved it.
 
 Homework 
-1.create the number of time a number was rolled with a rectangle
+1.create an optical illusion and make it move.
 
 
 
