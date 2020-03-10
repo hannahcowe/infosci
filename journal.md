@@ -2,53 +2,42 @@
  
  I created this program. 
  ```.py
-offset = 50
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+}
 
-def mouseClicked():
-    global offset
-    offset = offset + 1
-
-def setup():
-    size(500,500)
-    background(255)
-    
-def draw():
-    # line(x0yo,x1,y1)
-    stroke(0) # black line
-    y = 0
-    for n in range(10):
-        line(0,y, 500, y)
-        y = y + 50
-        
-    fill(0)
-    stroke(225) #white line
-    
-    y=0    
-    for n in range(5):
-        x = 0
-        for n in range(5):
-            square(x,y,50)
-            x = x + 100
-        y = y + 100
-        
-    # odd rows
-    y=50 
-    global offset 
-    for n in range(5):
-        x = 0 + offset
-        for n in range(5):
-            square(x,y,50)
-            x = x + 100
-        y = y + 100
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+ digitalWrite(12, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(12, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(11, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(11, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+   digitalWrite(10, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(10, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
          
 ```.py 
 
-I learned how to make an optical illusion and program it to move.
+I learned how to make a traffic light on tinkercad.
 
-I want to now how to make the whole background white as some of my sqaures turned grey as I moved it.
+I have no questions. 
 
 Homework 
-1.create an optical illusion and make it move.
+1. idk but it will be on classroom
 
 
 
